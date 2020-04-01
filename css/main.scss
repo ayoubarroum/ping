@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700&display=swap');
+$colors:(
+    pale-blue: hsl(223, 100%, 88%),
+    light-red: hsl(354, 100%, 66%),
+    blue: hsl(223, 87%, 63%),
+    gray: hsl(0, 0%, 59%),
+    very-dark-blue: hsl(209, 33%, 12%)
+);
+@function color($color-name){
+    @return map-get($colors,$color-name);
+}
+$mobile: 375px;
+$desktop:840px;
+$fontSize: 20px;
+
+@mixin desktop{
+    @media only screen and (min-width: #{$desktop})  {
+      @content;
+    }
+}
+body,html{
+    font-family:'Libre Franklin', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+  header{
+      padding-top: 6.25rem; //100px
+      text-align: center;
+      a{
+          text-decoration: none;
+      }
+      a img{
+        margin-bottom: 1.25rem;//20px
+      }
+  }
+  main{
+      h1{
+          font-weight: 300;
+          color:color(gray);
+          font-size: 1.5em;
+          @include desktop{
+            font-size: 3em; 
+            margin-bottom: 0;
+          }
+          strong{
+              color: color(very-dark-blue);
+          }
+      }
+      p{
+          color: black;
+          font-size: .9em;
+          @include desktop{
+              font-size: 1.2em;
+          }
+      }
+      form{
+        @include desktop{
+            width: 46%;
+            margin: auto;
+            display: grid;
+            grid-row: 50px;
+            grid-column: 3fr 1fr;
+            grid-template-areas: 
+            "email button";
+            margin-top: 46px;
+            
+          }
+      }
+      input#email{
+          border: 1px solid color(pale-blue);
+          appearance: none;
+          border-radius: 30px;
+          width: 70%;
+          padding:10px;
+          margin-bottom: -4px;
+          @include desktop{
+            grid-area: email;
+            width: 381px;
+            padding: 20px;
+            font-size: 1.2em;
+          }
+      }
+      ::placeholder{
+        color: color(pale-blue);
+    }
+    #result{
+        font-size: .7em;
+    }
+      button#validate{
+          
+          background-color: color(blue);
+          appearance: none;
+          padding:10px;
+          width: 76%;
+          border-radius: 30px;
+          color:white;
+          border: none;
+          box-shadow: -1px 3px 5px color(pale-blue);
+          @include desktop{
+            width: 180px;
+            grid-area: button;
+            margin-left: 11px;
+            padding: 20px;
+          }
+      }
+      a img{
+        width: 86%;
+        height: auto;
+        margin-top: 56px;
+        margin-bottom: 6em;
+        @include desktop{
+            width: 48%;
+        }
+      }
+      div.social_media{
+          width: fit-content;
+          margin: auto;
+        .smlogo{
+            font-size: 1em;
+            color: color(blue);
+            padding: 5px;
+            margin-left:10px;
+            background-color: white;
+            border-radius: 50%;
+            border: 1px solid color(pale-blue);
+            align-items: center;
+        }
+        .fa-facebook-f{
+            width: 17px;
+            margin-bottom: 2px;
+           }
+       
+      }
+      
+
+      p#copy{
+          font-size: .7em;
+          color: colorg(gray);
+          vertical-align: bottom;
+      }
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }

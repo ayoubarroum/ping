@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700&display=swap");
+body, html {
+  font-family: 'Libre Franklin', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body header {
+  padding-top: 6.25rem;
+  text-align: center;
+}
+
+body header a {
+  text-decoration: none;
+}
+
+body header a img {
+  margin-bottom: 1.25rem;
+}
+
+body main h1 {
+  font-weight: 300;
+  color: #969696;
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 840px) {
+  body main h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+}
+
+body main h1 strong {
+  color: #151f29;
+}
+
+body main p {
+  color: black;
+  font-size: .9em;
+}
+
+@media only screen and (min-width: 840px) {
+  body main p {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 840px) {
+  body main form {
+    width: 46%;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row: 50;
+    grid-row: 50px;
+    grid-column: 3fr 1fr;
+        grid-template-areas: "email button";
+    margin-top: 46px;
+  }
+}
+
+body main input#email {
+  border: 1px solid #c2d3ff;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 30px;
+  width: 70%;
+  padding: 10px;
+  margin-bottom: -4px;
+}
+
+@media only screen and (min-width: 840px) {
+  body main input#email {
+    grid-area: email;
+    width: 381px;
+    padding: 20px;
+    font-size: 1.2em;
+  }
+}
+
+body main ::-webkit-input-placeholder {
+  color: #c2d3ff;
+}
+
+body main :-ms-input-placeholder {
+  color: #c2d3ff;
+}
+
+body main ::-ms-input-placeholder {
+  color: #c2d3ff;
+}
+
+body main ::placeholder {
+  color: #c2d3ff;
+}
+
+body main #result {
+  font-size: .7em;
+}
+
+body main button#validate {
+  background-color: #4f7df3;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 10px;
+  width: 76%;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  -webkit-box-shadow: -1px 3px 5px #c2d3ff;
+          box-shadow: -1px 3px 5px #c2d3ff;
+}
+
+@media only screen and (min-width: 840px) {
+  body main button#validate {
+    width: 180px;
+    grid-area: button;
+    margin-left: 11px;
+    padding: 20px;
+  }
+}
+
+body main a img {
+  width: 86%;
+  height: auto;
+  margin-top: 56px;
+  margin-bottom: 6em;
+}
+
+@media only screen and (min-width: 840px) {
+  body main a img {
+    width: 48%;
+  }
+}
+
+body main div.social_media {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+body main div.social_media .smlogo {
+  font-size: 1em;
+  color: #4f7df3;
+  padding: 5px;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #c2d3ff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main div.social_media .fa-facebook-f {
+  width: 17px;
+  margin-bottom: 2px;
+}
+
+body main p#copy {
+  font-size: .7em;
+  color: colorg(gray);
+  vertical-align: bottom;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */
